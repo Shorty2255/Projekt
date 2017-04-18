@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="vaclavik_martin.xsl"?>
+<RDO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vaclavik_martin.xsd">
+    <game-info>
+        <version>1.5.108</version>
+        <region>EU</region>
+        <ping-limit>150</ping-limit>
+    </game-info>
+    <settings username="default">   
+        <zobrazeni>
+            <display>
+                <rozliseni>1920x1080</rozliseni>
+                <monitor value="1" />
+                <mode>Windowed-Fullscreen</mode>
+                <gamma value="15" />
+                <brightness value="50" />
+                <colorblind-mode enabled="false" />
+                <vsync enabled="false" />
+                <screen-saver enabled="false" />
+            </display>
+            <texture-quality>Medium</texture-quality>
+            <shadow-quality>Low</shadow-quality>
+            <terrain-quality>Medium</terrain-quality>
+            <water-quality>Low</water-quality>
+            <foliage-quality>High</foliage-quality>
+            <foliage-density>Low</foliage-density>
+            <view-distance>High</view-distance>
+            <anti-aliasing>MSAA</anti-aliasing>
+            <motion-blur enabled="false" />
+            <depth-of-field enabled="false" />
+        </zobrazeni>
+        <zvuk>
+            <volume enabled="true">
+                <main>50</main>
+                <speech>20</speech>
+                <music>10</music>
+                <ambient>30</ambient>
+                <effects>25</effects>
+            </volume>
+            <voicechat enabled="true">
+                <voip-volume>33</voip-volume>
+                <voip-mode>Push-to-talk</voip-mode>
+            </voicechat>
+            <speech lang="English" />
+            <subtitles lang="Czech" enabled="true" />
+        </zvuk>
+        <hra>
+            <ui-jazyk lang="English" />
+            <aim-assistance enabled="false" />
+            <transparent-ui>30</transparent-ui>
+            <view-pet>My-Only</view-pet>     
+            <hide-notifications>
+                <combat-zone enabled="true" />
+                <marketplace enabled="false" />
+                <guild-war enabled="true" />
+            </hide-notifications>
+        </hra>
+        <controls>
+            <input>keyboard-mouse</input>
+            <mouse-sensitivity>25</mouse-sensitivity>
+            <mouse-smoothing enabled="false" />
+            <mouse-inverted horizontal="false" vertical="false" />
+        </controls>
+    </settings>  
+    
+    <settings username="Shorty"> 
+        <zobrazeni>
+            <display>
+                <rozliseni>1920x1080</rozliseni>
+                <monitor value="1" />
+                <mode>Fullscreen</mode>
+                <gamma value="20" />
+                <brightness value="50" />
+                <colorblind-mode enabled="true" />
+                <vsync enabled="false" />
+                <screen-saver enabled="true" />
+            </display>
+            <texture-quality>High</texture-quality>
+            <shadow-quality>High</shadow-quality>
+            <terrain-quality>High</terrain-quality>
+            <water-quality>High</water-quality>
+            <foliage-quality>High</foliage-quality>
+            <foliage-density>High</foliage-density>
+            <view-distance>High</view-distance>
+            <anti-aliasing>OFF</anti-aliasing>
+            <motion-blur enabled="false" />
+            <depth-of-field enabled="false" />
+        </zobrazeni>
+        <zvuk>
+            <volume enabled="true">
+                <main>50</main>
+                <speech>20</speech>
+                <music>10</music>
+                <ambient>30</ambient>
+                <effects>25</effects>
+            </volume>
+            <voicechat enabled="true">
+                <voip-volume>33</voip-volume>
+                <voip-mode>Push-to-talk</voip-mode>
+            </voicechat>
+            <speech lang="English" />
+            <subtitles lang="Czech" enabled="true" />
+        </zvuk>
+        <hra>
+            <ui-jazyk lang="English" />
+            <aim-assistance enabled="false" />
+            <transparent-ui>30</transparent-ui>
+            <view-pet>My-Only</view-pet>     
+            <hide-notifications>
+                <combat-zone enabled="true" />
+                <marketplace enabled="false" />
+                <guild-war enabled="true" />
+            </hide-notifications>
+        </hra>
+        <controls>
+            <input>keyboard-mouse</input>
+            <mouse-sensitivity>25</mouse-sensitivity>
+            <mouse-smoothing enabled="false" />
+            <mouse-inverted horizontal="false" vertical="false" />
+        </controls>
+    </settings>
+    
+    <settings username="Tsugumi"> 
+        <zobrazeni>
+            <display>
+                <rozliseni>1920x1080</rozliseni>
+                <monitor value="1" />
+                <mode>Fullscreen</mode>
+                <gamma value="20" />
+                <brightness value="50" />
+                <colorblind-mode enabled="true" />
+                <vsync enabled="false" />
+                <screen-saver enabled="true" />
+            </display>
+            <texture-quality>Low</texture-quality>
+            <shadow-quality>Low</shadow-quality>
+            <terrain-quality>Low</terrain-quality>
+            <water-quality>Low</water-quality>
+            <foliage-quality>Low</foliage-quality>
+            <foliage-density>Low</foliage-density>
+            <view-distance>Low</view-distance>
+            <anti-aliasing>OFF</anti-aliasing>
+            <motion-blur enabled="false" />
+            <depth-of-field enabled="false" />
+        </zobrazeni>
+        <zvuk>
+            <volume enabled="false">
+                <main>50</main>
+                <speech>20</speech>
+                <music>10</music>
+                <ambient>30</ambient>
+                <effects>25</effects>
+            </volume>
+            <voicechat enabled="false">
+                <voip-volume>33</voip-volume>
+                <voip-mode>Push-to-talk</voip-mode>
+            </voicechat>
+            <speech lang="German" />
+            <subtitles lang="Czech" enabled="false" />
+        </zvuk>
+        <hra>
+            <ui-jazyk lang="German" />
+            <aim-assistance enabled="true" />
+            <transparent-ui>100</transparent-ui>
+            <view-pet>All</view-pet>     
+            <hide-notifications>
+                <combat-zone enabled="true" />
+                <marketplace enabled="false" />
+                <guild-war enabled="false" />
+            </hide-notifications>
+        </hra>
+        <controls>
+            <input>Controller</input>
+            <mouse-sensitivity>25</mouse-sensitivity>
+            <mouse-smoothing enabled="false" />
+            <mouse-inverted horizontal="false" vertical="false" />
+        </controls>
+    </settings>
+    
+    <settings username="Amanda"> 
+        <zobrazeni>
+            <display>
+                <rozliseni>800x600</rozliseni>
+                <monitor value="2" />
+                <mode>Window</mode>
+                <gamma value="30" />
+                <brightness value="55" />
+                <colorblind-mode enabled="false" />
+                <vsync enabled="true" />
+                <screen-saver enabled="false" />
+            </display>
+            <texture-quality>Low</texture-quality>
+            <shadow-quality>High</shadow-quality>
+            <terrain-quality>High</terrain-quality>
+            <water-quality>High</water-quality>
+            <foliage-quality>High</foliage-quality>
+            <foliage-density>Low</foliage-density>
+            <view-distance>High</view-distance>
+            <anti-aliasing>FXAA</anti-aliasing>
+            <motion-blur enabled="true" />
+            <depth-of-field enabled="false" />
+        </zobrazeni>
+        <zvuk>
+            <volume enabled="false">
+                <main>50</main>
+                <speech>20</speech>
+                <music>10</music>
+                <ambient>30</ambient>
+                <effects>25</effects>
+            </volume>
+            <voicechat enabled="true">
+                <voip-volume>33</voip-volume>
+                <voip-mode>Push-to-talk</voip-mode>
+            </voicechat>
+            <speech lang="English" />
+            <subtitles lang="Czech" enabled="true" />
+        </zvuk>
+        <hra>
+            <ui-jazyk lang="English" />
+            <aim-assistance enabled="false" />
+            <transparent-ui>30</transparent-ui>
+            <view-pet>My-Only</view-pet>     
+            <hide-notifications>
+                <combat-zone enabled="true" />
+                <marketplace enabled="false" />
+                <guild-war enabled="true" />
+            </hide-notifications>
+        </hra>
+        <controls>
+            <input>keyboard-mouse</input>
+            <mouse-sensitivity>25</mouse-sensitivity>
+            <mouse-smoothing enabled="false" />
+            <mouse-inverted horizontal="false" vertical="false" />
+        </controls>
+    </settings>
+</RDO>

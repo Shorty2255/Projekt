@@ -1,0 +1,78 @@
+
+            {
+            "Uzivatelske ucty": [
+                {
+                "Username":"default",
+                    "Resolution":"1920x1080",
+                    "Mode":"Windowed-Fullscreen",
+                    "Color-blind mode":"false",
+                    "VSync":"false",
+                    "Screen-saver":"false",
+                 
+                    "Texture":"Medium",
+                    "Shadows":"Low",
+                    "Terrain":"Medium",
+                    "Water":"Low",
+                    "Foliage":"High",
+                    "View distance":"High",
+                    "AA":"MSAA",
+                    "Motion blur":"false",
+                    "Depth of field":"false"
+                },
+                {
+                "Username":"Shorty",
+                    "Resolution":"1920x1080",
+                    "Mode":"Fullscreen",
+                    "Color-blind mode":"true",
+                    "VSync":"false",
+                    "Screen-saver":"true",
+                 
+                    "Texture":"High",
+                    "Shadows":"High",
+                    "Terrain":"High",
+                    "Water":"High",
+                    "Foliage":"High",
+                    "View distance":"High",
+                    "AA":"OFF",
+                    "Motion blur":"false",
+                    "Depth of field":"false"
+                },
+                {
+                "Username":"Tsugumi",
+                    "Resolution":"1920x1080",
+                    "Mode":"Fullscreen",
+                    "Color-blind mode":"true",
+                    "VSync":"false",
+                    "Screen-saver":"true",
+                 
+                    "Texture":"Low",
+                    "Shadows":"Low",
+                    "Terrain":"Low",
+                    "Water":"Low",
+                    "Foliage":"Low",
+                    "View distance":"Low",
+                    "AA":"OFF",
+                    "Motion blur":"false",
+                    "Depth of field":"false"
+                },
+                {
+                "Username":"Amanda",
+                    "Resolution":"800x600",
+                    "Mode":"Window",
+                    "Color-blind mode":"false",
+                    "VSync":"true",
+                    "Screen-saver":"false",
+                 
+                    "Texture":"Low",
+                    "Shadows":"High",
+                    "Terrain":"High",
+                    "Water":"High",
+                    "Foliage":"High",
+                    "View distance":"High",
+                    "AA":"FXAA",
+                    "Motion blur":"true",
+                    "Depth of field":"false"
+                }
+             ]
+            }
+	

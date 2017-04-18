@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>RDO - Dokumentace</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h1>Dokumentace k projektu RDO</h1>
+        <nav>
+            <h2>Navigace</h2>
+            <ul>
+                <li><a href="#uvod">Úvod</a></li>
+                <li><a href="#metodika">Metodika</a></li>
+                <li><a href="#popis">Elementy a atributy</a></li>
+                <li><a href="#transf">Transformace</a></li>
+                <li><a href="#zaver">Závěr</a></li>
+              </ul>
+        </nav>
+        <main>
+            <section id="uvod">
+                <article>
+                    <header>
+                        <h3>Úvod</h3>
+                    </header>
+                    <p>
+                        Jako téma svého semestrálního projektu jsem si vybral smyšlenou počítačovou hru 'RDO'.
+                        Toto téma jsem si zvolil protože mě vždy zajímal vývoj her a chtěl jsem si vyzkoušet jak navrnout jednoduché ukládání uživatelského nastavení.
+                    </p>
+                    <p>
+                        XML soubor je uřčen k ukládání herního nastavení pro jednotlivé uživatele. Je zde mnoho nedostatků, které jsem ovšem v rámci svého projektu zanedbal. Pro kompletní ukládání by bylo nutné tyto konfigurace ukládat v lepším formátu, a zabezpečit proti neoprávněné manipulaci.
+                    </p>
+                </article>
+            </section>
+            <section id="metodika">
+                <article>
+                    <header>
+                        <h3>Metodika</h3>
+                    </header>
+                    <h4>Využité programy</h4>
+                    <p>
+                    Při vytváření tohoto projektu jsem použil program <a href="https://netbeans.org/">NetBeans</a> a prohlížeč <a href="https://www.google.com/chrome/">Google Chrome</a>.    
+                    </p>
+                    <h4>Využité webové stránky</h4>
+                    <p>
+                      Většinu informací jsem našel ve zveřejněných prezentacích na <a href="https://moodle.czu.cz">Moodlu</a>, validaci jsem provedl přes integrovanou validační funkci v NetBeans a doporučený validátor na webu 
+                      <a href="http://www.utilities-online.info/xsdvalidation/">Utilities-online</a>
+                    </p>
+                </article>
+            </section>
+            <section id="popis" >
+        <article>
+          <header>
+            <h2>Popis elementů a atributů</h2>
+          </header>
+          <h3>Použité elementy</h3>
+          <table border="1" id="elementy" title="Tabulka elementů">
+            <tr>
+              <td>Název elementu</td>
+              <td>Popis elementu</td>
+              <td>Schématické omezení</td>
+            </tr>
+            <tr>                       
+              <td>game-info</td>
+              <td>Obaluje obecné nastavení hry</td>
+              <td></td>
+            </tr>
+            <tr>                       
+              <td>version</td>
+              <td>Současná verze hry</td>
+              <td>[0-9][.][0-9]*[.][0-9]*</td>
+            </tr>
+            <tr>                       
+              <td>region</td>
+              <td>Region na ktrerý se uživatel připojuje</td>
+              <td>EU, US, AUS</td>
+            </tr>
+            <tr>                       
+              <td>ping-limit</td>
+              <td>Limit odezvy pro připojení na server</td>
+              <td>0-500</td>
+            </tr>
+            <tr>                       
+              <td>settings</td>
+              <td>Obaluje obecné nastavení uživatelů (obsahuje atribut <a href="#username">username</a>, pro specifikovani uzivatele)</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>zobrazení</td>
+              <td>Obaluje nastavení upravující obecný vzhled hry</td>
+              <td>Bez omezení</td>
+            </tr> 
+            <tr>                       
+              <td>display</td>
+              <td>Obaluje nastavení upravující možnosti zobrazení hry</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>rozliseni</td>
+              <td>Určuje v jakém rozlišení se bude hra zobrazovat</td>
+              <td>1920x1080, 1440x900, 1280x1024, 800x600</td>
+            </tr>
+            <tr>                       
+              <td>monitor</td>
+              <td>Určuje na který monitor se hra zobrazí</td>
+              <td>1, 2, 3</td>
+            </tr>
+            <tr>                       
+              <td>mode</td>
+              <td>Určuje v jakém módu se bude hra zobrazovat</td>
+              <td>Fullscreen, Window, Windowed-Fullscreen</td>
+            </tr>
+            <tr>                       
+              <td>gamma</td>
+              <td>Nastavení světlosti hry - upráva gamy</td>
+              <td>0 - 100</td>
+            </tr>
+            <tr>                       
+              <td>brightness</td>
+              <td>Nastavení světlosti hry - upráva jasu</td>
+              <td>0 - 100</td>
+            </tr>
+            <tr>                       
+              <td>colorblind-mode</td>
+              <td>Vypnutí/Zapnutí podpory pro zrakově postižené</td>
+              <td>Vypnutí/Zapnutí přes atribut <a href="#enabled">enabled</a></td>
+            </tr>
+            <tr>                       
+              <td>vsync</td>
+              <td>Vypnutí/Zapnutí vertikální synchronizace</td>
+              <td>Vypnutí/Zapnutí přes atribut <a href="#enabled">enabled</a></td>
+            </tr> 
+            <tr>                       
+              <td>screen-saver</td>
+              <td>Vypnutí/Zapnutí spořiče obrazovky</td>
+              <td>Vypnutí/Zapnutí přes atribut <a href="#enabled">enabled</a></td>
+            </tr>
+            <tr>                       
+              <td>texture-quality</td>
+              <td>Kvalita vykreslovaných textur</td>
+              <td>Ultra, High, Medium, Low</td>
+            </tr>
+            <tr>                       
+              <td>shadow-quality</td>
+              <td>Kvalita vykreslovaných stínů</td>
+              <td>Ultra, High, Medium, Low</td>
+            </tr>
+            <tr>                       
+              <td>terrain-quality</td>
+              <td>Kvalita vykreslovaného terénu</td>
+              <td>Ultra, High, Medium, Low</td>
+            </tr>
+            <tr>                       
+              <td>water-quality</td>
+              <td>Kvalita vody</td>
+              <td>Ultra, High, Medium, Low</td>
+            </tr>
+            <tr>                       
+              <td>foliage-quality</td>
+              <td>Kvalita vykreslovaného porostu</td>
+              <td>Ultra, High, Medium, Low</td>
+            </tr>
+            <tr>                       
+              <td>foliage-density</td>
+              <td>Množství vykreslovaného porostu</td>
+              <td>High, Medium, Low</td>
+            </tr>
+            <tr>                       
+              <td>view-distance</td>
+              <td>Vzdálenost dohledu (renderování)</td>
+              <td>High, Medium, Low</td>
+            </tr>
+            <tr>                       
+              <td>anti-aliasing</td>
+              <td>Určuje jakou metodu AA bude hra využívat</td>
+              <td>OFF, FXAA, MSAA, MLAA</td>
+            </tr>
+            <tr>                       
+              <td>motion-blur</td>
+              <td>Vypnutí/Zapnutí rozmazání pohledu při pohybu</td>
+              <td>Vypnutí/Zapnutí přes atribut <a href="#enabled">enabled</a></td>
+            </tr>
+            <tr>                       
+              <td>depth-of-field</td>
+              <td>Vypnutí/Zapnutí zaostřování/rozostřování</td>
+              <td>Vypnutí/Zapnutí přes atribut <a href="#enabled">enabled</a></td>
+            </tr>
+            <tr>                       
+              <td>zvuk</td>
+              <td>Obaluje nastavení zkuvu</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>volume</td>
+              <td>Obaluje nastavení hlasitosti a celkové vypnutí/zapnutí zvuků</td>
+              <td>Vypnutí/Zapnutí přes atribut <a href="#enabled">enabled</a></td>
+            </tr>
+            <tr>                       
+              <td>main</td>
+              <td>Procento celkové hlasitosti hry</td>
+              <td>0 - 100</td>
+            </tr>
+            <tr>                       
+              <td>speech</td>
+              <td>Procentuální hlasitost mluveného slova</td>
+              <td>0 - 100</td>
+            </tr>
+            <tr>                       
+              <td>music</td>
+              <td>Procentuální hlasitost hudby v pozadí</td>
+              <td>0 - 100</td>
+            </tr>
+            <tr>                       
+              <td>ambient</td>
+              <td>Procentuální hlasitost zvuků přírody</td>
+              <td>0 - 100</td>
+            </tr>
+            <tr>                       
+              <td>effects</td>
+              <td>Procentuální hlasitost efektů</td>
+              <td>0 - 100</td>
+            </tr>
+            <tr>                       
+              <td>voicechat</td>
+              <td>Obaluje nastavení hlasové komunikace a celkové vypnutí/zapnutí hlasové komunikace</td>
+              <td>Vypnutí/Zapnutí přes atribut <a href="#enabled">enabled</a></td>
+            </tr>
+            <tr>                       
+              <td>voip-volume</td>
+              <td>Procentualní hlasitost hlasové komunikace</td>
+              <td>0 - 100</td>
+            </tr>
+            <tr>                       
+              <td>voip-mode</td>
+              <td>Volba způsobu nahrávání zvuku</td>
+              <td>Always, Push-to-talk, Off</td>
+            </tr>
+            <tr>                       
+              <td>speech</td>
+              <td>Volba jazyku, kterým mluví NPC</td>
+              <td>English, German</td>
+            </tr>  
+            <tr>                       
+              <td>subtitles</td>
+              <td>Volba jazyku titulků (atribut <a href="#lang">lang</a>), Vypnutí/Zapnutí titulků</td>
+              <td>English, German, Czech - Vypnutí/Zapnutí přes atribut <a href="#enabled">enabled</a></td>
+            </tr> 
+            <tr>                       
+              <td>hra</td>
+              <td>Obal obecného nastavení hry</td>
+              <td>Bez omezení</td>
+            </tr>
+            <tr>                       
+              <td>ui-jazyk</td>
+              <td>Volba jazyka grafického rozhraní - atribut <a href="#lang">lang</a></td>
+              <td>English, German</td>
+            </tr>
+            <tr>                       
+              <td>aim-assistance</td>
+              <td>Vypnutí/Zapnutí podpory míření</td>
+              <td>Vypnutí/Zapnutí přes atribut <a href="#enabled">enabled</a></td>
+            </tr>
+            <tr>                       
+              <td>transparent-ui</td>
+              <td>Procento průhlednosti UI</td>
+              <td>0 - 100</td>
+            </tr>
+            <tr>                       
+              <td>view-pet</td>
+              <td>Nastavení zobrazování mazlíčků</td>
+              <td>All, My-Only, Off</td>
+            </tr>
+            <tr>                       
+              <td>hide-notifications</td>
+              <td>Obal pro nastavení upozornění</td>
+              <td></td>
+            </tr>
+            <tr>                       
+              <td>combat-zone</td>
+              <td>Vypnutí/Zapnutí oznámení vstupu do válečné zóny</td>
+              <td>Vypnutí/Zapnutí přes atribut <a href="#enabled">enabled</a></td>
+            </tr>
+            <tr>                       
+              <td>marketplace</td>
+              <td>Vypnutí/Zapnutí oznámení obchodu</td>
+              <td>Vypnutí/Zapnutí přes atribut <a href="#enabled">enabled</a></td>
+            </tr>
+            <tr>                       
+              <td>guild-war</td>
+              <td>Vypnutí/Zapnutí oznámení o vyhlášení guildovní války</td>
+              <td>Vypnutí/Zapnutí přes atribut <a href="#enabled">enabled</a></td>
+            </tr>
+            <tr>                       
+              <td>controls</td>
+              <td>Obal pro nastavení ovládání</td>
+              <td></td>
+            </tr>
+            <tr>                       
+              <td>input</td>
+              <td>Volba vstupního zařízení</td>
+              <td>Keyboard-mouse, Controller</td>
+            </tr>
+            <tr>                       
+              <td>mouse-sensitivity</td>
+              <td>Nastavení citlivosti myši</td>
+              <td>0 - 100</td>
+            </tr>
+            <tr>                       
+              <td>mouse-smoothing</td>
+              <td>Vypnutí/Zapnutí vyhlazování pohybu myši</td>
+              <td>Vypnutí/Zapnutí přes atribut <a href="#enabled">enabled</a></td>
+            </tr>
+            <tr>                       
+              <td>mouse-inverted</td>
+              <td>Vypnutí/Zapnutí převráceného ovládání myší (atributy <a href="#horizontal">horizontal</a> a <a href="#vertical">vertical</a>)</td>
+              <td></td>
+            </tr>
+          </table>
+          <h3>Použité atributy</h3>
+          <table border="1" id="atributy" title="Tabulka atributů">
+            <tr>
+              <td>Název atributu</td>
+              <td>Popis atributu</td>
+            </tr>
+            <tr>                       
+              <td id="username">username</td>
+              <td>Určuje název daného uživatele</td>
+            </tr>
+            <tr>                       
+              <td id="enabled">enabled</td>
+              <td>Obsahuje hodnotu True/False (pro obsluhu on/off vypínačů)</td>
+            </tr>
+            <tr>                       
+              <td>value</td>
+              <td>Určuje hodnotu uloženou v daném elementu (omezení viz. jednotlivé elementy)</td>
+            </tr>
+            <tr>                       
+              <td id="lang">lang</td>
+              <td>Slouží pro nastavení jazyka (omezení viz. jednotlivé elementy)</td>
+            </tr>
+            <tr>                       
+              <td id="horizontal">horizontal</td>
+              <td>ON/OFF - horizontální převrácení myši</td>
+            </tr><tr>                       
+              <td id="vertical">vertical</td>
+              <td>ON/OFF - vertikální převrácení myši</td>
+            </tr>
+            
+          </table>
+        </article>
+    </section>
+    <section id="transf">
+        <article>
+          <header>
+            <h2>Transformace</h2>
+          </header>
+          <p>Transformace vybere s pomocí cyklu <code>for-each</code> data, které poté zobrazí ve formátu <strong>JSON</strong>. Pro tuto transformaci jsem zvolil pouze data týkající se grafiky hry.
+             Transformace obsahuje také test na zjištění posledního údaje, za který poté nevloží čárku, pro zajištění správné syntaxe.</p>
+        </article>
+      </section>
+      <section id="zaver">
+        <article>
+          <header>
+            <h2>Závěr</h2>
+          </header>
+          <p>Při tvorbě této práce jsem  poprvé v životě pracoval s jazykem XML, který v budoucnu nejspíše využiji. 
+          Při podrobnějším rozpracování projektu by bylo třeba udělat konkrétné omezení na všechny elementy, aby byla aplikace správně zabezpečená.
+          </p>
+        </article>
+      </section>
+        </main>
+        <footer>
+            <p>Autor: <strong>Martin Václavík, xvacm018</strong> | Česká Zemědělská univerzita Praha, dne 17.4.2017</p>
+        </footer>
+    </body>
+</html>
