@@ -261,13 +261,13 @@
             <volume enabled="false">
                 <main>50</main>
                 <speech>20</speech>
-                <music>10</music>
+                <music>15</music>
                 <ambient>30</ambient>
                 <effects>25</effects>
             </volume>
             <voicechat enabled="true">
-                <voip-volume>33</voip-volume>
-                <voip-mode>Push-to-talk</voip-mode>
+                <voip-volume>50</voip-volume>
+                <voip-mode>Always</voip-mode>
             </voicechat>
             <speech lang="English" />
             <subtitles lang="Czech" enabled="true" />
