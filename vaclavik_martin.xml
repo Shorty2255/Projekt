@@ -233,4 +233,61 @@
             <mouse-inverted horizontal="false" vertical="false" />
         </controls>
     </settings>
+    
+    <settings username="Belinor"> 
+        <zobrazeni>
+            <display>
+                <rozliseni>1280x1024</rozliseni>
+                <monitor value="1" />
+                <mode>Fullscreen</mode>
+                <gamma value="30" />
+                <brightness value="55" />
+                <colorblind-mode enabled="false" />
+                <vsync enabled="true" />
+                <screen-saver enabled="false" />
+            </display>
+            <texture-quality>Medium</texture-quality>
+            <shadow-quality>High</shadow-quality>
+            <terrain-quality>High</terrain-quality>
+            <water-quality>High</water-quality>
+            <foliage-quality>High</foliage-quality>
+            <foliage-density>Medium</foliage-density>
+            <view-distance>High</view-distance>
+            <anti-aliasing>MLAA</anti-aliasing>
+            <motion-blur enabled="false" />
+            <depth-of-field enabled="true" />
+        </zobrazeni>
+        <zvuk>
+            <volume enabled="false">
+                <main>50</main>
+                <speech>20</speech>
+                <music>10</music>
+                <ambient>30</ambient>
+                <effects>25</effects>
+            </volume>
+            <voicechat enabled="true">
+                <voip-volume>33</voip-volume>
+                <voip-mode>Push-to-talk</voip-mode>
+            </voicechat>
+            <speech lang="English" />
+            <subtitles lang="Czech" enabled="true" />
+        </zvuk>
+        <hra>
+            <ui-jazyk lang="English" />
+            <aim-assistance enabled="false" />
+            <transparent-ui>30</transparent-ui>
+            <view-pet>My-Only</view-pet>     
+            <hide-notifications>
+                <combat-zone enabled="true" />
+                <marketplace enabled="false" />
+                <guild-war enabled="true" />
+            </hide-notifications>
+        </hra>
+        <controls>
+            <input>keyboard-mouse</input>
+            <mouse-sensitivity>25</mouse-sensitivity>
+            <mouse-smoothing enabled="false" />
+            <mouse-inverted horizontal="false" vertical="false" />
+        </controls>
+    </settings>
 </RDO>
