@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html lang="cs">
     <head>
         <title>RDO - Dokumentace</title>
         <meta charset="utf-8">
@@ -12,9 +12,12 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            table, td, th { border: 1px solid gray }
+        </style>
     </head>
     <body>
-        
+
         <!-- GitHub: https://github.com/Shorty2255/Projekt -->
         
         <h1>Dokumentace k projektu RDO</h1>
@@ -65,7 +68,7 @@ and open the template in the editor.
             <h2>Popis elementů a atributů</h2>
           </header>
           <h3>Použité elementy</h3>
-          <table border="1" id="elementy" title="Tabulka elementů">
+          <table id="elementy" title="Tabulka elementů">
             <tr>
               <td>Název elementu</td>
               <td>Popis elementu</td>
@@ -94,17 +97,17 @@ and open the template in the editor.
             <tr>                       
               <td>settings</td>
               <td>Obaluje obecné nastavení uživatelů (obsahuje atribut <a href="#username">username</a>, pro specifikovani uzivatele)</td>
-              <td>Bez omezení</td>
+              <td></td>
             </tr>
             <tr>                       
               <td>zobrazení</td>
               <td>Obaluje nastavení upravující obecný vzhled hry</td>
-              <td>Bez omezení</td>
+              <td></td>
             </tr> 
             <tr>                       
               <td>display</td>
               <td>Obaluje nastavení upravující možnosti zobrazení hry</td>
-              <td>Bez omezení</td>
+              <td></td>
             </tr>
             <tr>                       
               <td>rozliseni</td>
@@ -199,7 +202,7 @@ and open the template in the editor.
             <tr>                       
               <td>zvuk</td>
               <td>Obaluje nastavení zkuvu</td>
-              <td>Bez omezení</td>
+              <td></td>
             </tr>
             <tr>                       
               <td>volume</td>
@@ -259,7 +262,7 @@ and open the template in the editor.
             <tr>                       
               <td>hra</td>
               <td>Obal obecného nastavení hry</td>
-              <td>Bez omezení</td>
+              <td></td>
             </tr>
             <tr>                       
               <td>ui-jazyk</td>
@@ -328,7 +331,7 @@ and open the template in the editor.
             </tr>
           </table>
           <h3>Použité atributy</h3>
-          <table border="1" id="atributy" title="Tabulka atributů">
+          <table id="atributy" title="Tabulka atributů">
             <tr>
               <td>Název atributu</td>
               <td>Popis atributu</td>
@@ -351,10 +354,10 @@ and open the template in the editor.
             </tr>
             <tr>                       
               <td id="horizontal">horizontal</td>
-              <td>ON/OFF - horizontální převrácení myši</td>
+              <td>true/false - horizontální převrácení myši</td>
             </tr><tr>                       
               <td id="vertical">vertical</td>
-              <td>ON/OFF - vertikální převrácení myši</td>
+              <td>true/false - vertikální převrácení myši</td>
             </tr>
             
           </table>
